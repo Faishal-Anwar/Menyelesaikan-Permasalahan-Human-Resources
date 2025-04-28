@@ -64,7 +64,7 @@ Proses pemodelan dilakukan menggunakan 4 algoritma yang berbeda untuk mengetahui
 
 2. Pelatihan model menggunakan 4 algoritma yang berbeda yaitu Logistic Regression, Random Forest, XGBoost, SVM.
 
-3. Evaluasi dan bandingkan berbagai model berdasarkan metrik seperti accuracy, AUC, recall, dan F1-score.
+3. Evaluasi dan bandingkan berbagai model berdasarkan metrik seperti accuracy, Precision, recall, dan F1-score.
 
 | Model            | Accuracy | Precision | Recall   | F1-Score |
 |------------------|----------|-----------|----------|----------|
