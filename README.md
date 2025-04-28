@@ -101,3 +101,6 @@ K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel ya
 ## Referensi
 1. fahadrehman07 - Kagle. Diakses pada 20 April 2025 dari (https://www.kaggle.com/code/fahadrehman07/salifort-motors-providing-data-driven-suggestions)
 2. Google Colab. Diakses pada 20 April 2025 dari (https://colab.research.google.com/drive/1iVo19vQtD5hk-Kcjuqb2Vg33bMnA1vLu?usp=sharing)
+
+![image](https://github.com/user-attachments/assets/755a0739-4f81-452a-b703-aaba3488aaa2)
+
