@@ -14,7 +14,8 @@
 
 - Analisis faktor-faktor penyebab attrition.
 - Visualisasi data dan insight melalui **Tableau Public**.
-- Pembuatan model machine learning menggunakan **Extra Trees Classifier**.
+- Pembuatan model machine learning menggunakan algoritma Machine Learning.
+- Deployment model menggunakan streamlit untuk bisa memprediksi secara daring.
 
 ## Persiapan
 
@@ -56,30 +57,36 @@ Komponen Dashboard:
 
 ### Eksperimen Model
 
-Proses pemodelan dilakukan menggunakan framework **PyCaret** yang memungkinkan perbandingan otomatis berbagai algoritma klasifikasi.
+Proses pemodelan dilakukan menggunakan 4 algoritma yang berbeda untuk mengetahui model mana yang terbaik.
 
 #### Langkah-langkah:
 1. Preprocessing data: Meliputi penanganan fitur kategorikal, numerik, dan missing value. Selain itu, dilakukan feature selection menggunakan RFE (Recursive Feature Elimination) untuk memilih fitur terbaik, serta penanganan data tidak seimbang menggunakan SMOTE (Synthetic Minority Over-sampling Technique).
 
-2. Inisialisasi setup PyCaret dengan target = Attrition.
+2. Pelatihan model menggunakan 4 algoritma yang berbeda yaitu Logistic Regression, Random Forest, XGBoost, SVM.
 
 3. Evaluasi dan bandingkan berbagai model berdasarkan metrik seperti accuracy, AUC, recall, dan F1-score.
 
-| Metrik Evaluasi | Deskripsi |
-|-----------------|-----------|
-| **Accuracy**    | Ketepatan model secara keseluruhan |
-| **AUC (ROC)**   | Kemampuan model membedakan kelas |
-| **Recall**      | Kemampuan mendeteksi karyawan yang benar-benar keluar |
-| **Precision**   | Akurasi dari prediksi keluar |
-| **F1-score**    | Harmoni antara Recall dan Precision |
-| **Kappa**       | Agreement antara prediksi dan aktual |
-| **MCC**         | Korelasi antara label aktual dan prediksi |
+| Model            | Accuracy | Precision | Recall   | F1-Score |
+|------------------|----------|-----------|----------|----------|
+| Logistic Regression | 0.844340 | 0.714286  | 0.138889 | 0.232558 |
+| Random Forest       | 0.839623 | 0.625000  | 0.138889 | 0.227273 |
+| XGBoost            | 0.816038 | 0.421053  | 0.222222 | 0.290909 |
+| SVM                | 0.830189 | 0.000000  | 0.000000 | 0.000000 |
 
-Dari hasil eksperimen, model **K Neighbors Classifier** dipilih sebagai model terbaik berdasarkan keseimbangan skor di seluruh metrik tersebut.
+
+Dari hasil eksperimen, model **XGBoost** dipilih sebagai model terbaik berdasarkan keseimbangan skor di seluruh metrik tersebut.
 
 ###  Model Terpilih:
-- **K Neighbors Classifier**  
-K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel yang tidak memerlukan pelatihan model sebelumnya. KNN bekerja dengan menghitung jarak ke tetangga terdekat untuk melakukan prediksi, sehingga cocok untuk tugas klasifikasi dan regresi. Keunggulannya termasuk kemudahan implementasi, akurasi yang baik pada data sederhana, serta tidak bergantung pada asumsi distribusi data. Namun, KNN bisa lambat pada dataset besar karena harus menghitung jarak ke semua data setiap kali prediksi.
+- **XGBoost (Extreme Gradient Boosting)r**  
+XGBoost adalah algoritma pembelajaran mesin berbasis teknik Gradient Boosting yang dirancang untuk meningkatkan performa model klasifikasi dan regresi. XGBoost merupakan implementasi yang sangat efisien dan terkenal karena kemampuannya untuk menangani data besar dan kompleks dengan sangat baik. Salah satu keunggulannya adalah kemampuannya untuk mengurangi overfitting dan meningkatkan akurasi melalui regularisasi yang efektif, seperti L1 (Lasso) dan L2 (Ridge).
+
+## Deployment dengan streamlit
+Langkah-langkah menggunakan sistem machine learning berbasis XGBoost adalah sebagai berikut.
+
+1. Membuka link: https://m7e6p7ufh6ul4wt8sepkbe.streamlit.app/
+2. Mengisi data yang dibutuhkan. Perlu diperhatikan bahwa nilai jurusan atau Course tidak boleh 'None' serta terdapat batas minimum dan maksimum pada input numerik. Selain itu, pengguna harus menekan enter agar dapat menyimpan data numerik.
+3. Hasil prediksi akan tampil di bagian bawah.
+![image](https://github.com/user-attachments/assets/755a0739-4f81-452a-b703-aaba3488aaa2)
 
 ---
 
@@ -101,6 +108,4 @@ K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel ya
 ## Referensi
 1. fahadrehman07 - Kagle. Diakses pada 20 April 2025 dari (https://www.kaggle.com/code/fahadrehman07/salifort-motors-providing-data-driven-suggestions)
 2. Google Colab. Diakses pada 20 April 2025 dari (https://colab.research.google.com/drive/1iVo19vQtD5hk-Kcjuqb2Vg33bMnA1vLu?usp=sharing)
-
-![image](https://github.com/user-attachments/assets/755a0739-4f81-452a-b703-aaba3488aaa2)
 
