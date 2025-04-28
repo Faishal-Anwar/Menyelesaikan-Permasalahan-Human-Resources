@@ -86,7 +86,7 @@ Langkah-langkah menggunakan sistem machine learning berbasis XGBoost adalah seba
 1. Membuka link: https://m7e6p7ufh6ul4wt8sepkbe.streamlit.app/
 2. Mengisi data yang dibutuhkan. Perlu diperhatikan bahwa pengguna harus menekan enter agar dapat menyimpan data numerik.
 3. Hasil prediksi akan tampil di bagian bawah.
-![image](https://github.com/user-attachments/assets/755a0739-4f81-452a-b703-aaba3488aaa2)
+![image](https://github.com/user-attachments/assets/2eedf8f4-15f9-4ee9-821e-34a56da807b1)
 
 ---
 
