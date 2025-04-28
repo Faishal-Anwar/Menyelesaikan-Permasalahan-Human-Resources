@@ -84,7 +84,7 @@ XGBoost adalah algoritma pembelajaran mesin berbasis teknik Gradient Boosting ya
 Langkah-langkah menggunakan sistem machine learning berbasis XGBoost adalah sebagai berikut.
 
 1. Membuka link: https://m7e6p7ufh6ul4wt8sepkbe.streamlit.app/
-2. Mengisi data yang dibutuhkan. Perlu diperhatikan bahwa nilai jurusan atau Course tidak boleh 'None' serta terdapat batas minimum dan maksimum pada input numerik. Selain itu, pengguna harus menekan enter agar dapat menyimpan data numerik.
+2. Mengisi data yang dibutuhkan. Perlu diperhatikan bahwa pengguna harus menekan enter agar dapat menyimpan data numerik.
 3. Hasil prediksi akan tampil di bagian bawah.
 ![image](https://github.com/user-attachments/assets/755a0739-4f81-452a-b703-aaba3488aaa2)
 
