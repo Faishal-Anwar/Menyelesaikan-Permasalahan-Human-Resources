@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load model
-model = joblib.load('xgb_attrition_model.pkl')  # Sesuaikan nama file modelmu
+model = joblib.load('model_attrition.pkl')  # Sesuaikan nama file modelmu
 
 st.title('🚀 Prediksi Attrition Karyawan')
 
