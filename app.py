@@ -1,46 +1,45 @@
 import streamlit as st
-import numpy as np
+import pandas as pd
 import joblib
 
 # Load model
-model = joblib.load("model_attrition.pkl")  # Ganti dengan model Anda
+model = joblib.load('xgb_attrition_model.pkl')  # Sesuaikan nama file modelmu
 
-st.set_page_config(page_title="Prediksi Employee Attrition", layout="centered")
-st.title("🧠 Prediksi Employee Attrition")
+st.title('🚀 Prediksi Attrition Karyawan')
 
-st.markdown("Masukkan data karyawan untuk memprediksi apakah mereka berpotensi keluar dari perusahaan.")
+st.subheader('📋 Masukkan Data Karyawan (10 Fitur Terpilih)')
 
-# Form input
-with st.form("prediction_form"):
-    age = st.slider("Usia", 18, 60, 30)
-    daily_rate = st.number_input("Daily Rate", min_value=100, max_value=2000, value=1100)
-    distance_from_home = st.slider("Jarak dari Rumah (km)", 1, 30, 10)
-    hourly_rate = st.number_input("Hourly Rate", min_value=10, max_value=150, value=60)
-    monthly_income = st.number_input("Monthly Income", min_value=1000, max_value=30000, value=5000)
-    monthly_rate = st.number_input("Monthly Rate", min_value=1000, max_value=30000, value=15000)
-    num_companies_worked = st.slider("Jumlah Perusahaan Sebelumnya", 0, 10, 2)
-    over_time = st.selectbox("Lembur?", ["No", "Yes"])
-    total_working_years = st.slider("Total Tahun Bekerja", 0, 40, 10)
-    years_at_company = st.slider("Tahun di Perusahaan Sekarang", 0, 40, 5)
+# Form input untuk 10 fitur
+age = st.number_input('Umur', min_value=18, max_value=60, value=30)
+daily_rate = st.number_input('Daily Rate', min_value=100, max_value=1500, value=500)
+distance_from_home = st.number_input('Distance From Home', min_value=1, max_value=50, value=10)
+hourly_rate = st.number_input('Hourly Rate', min_value=30, max_value=100, value=60)
+monthly_income = st.number_input('Monthly Income', min_value=1000, max_value=20000, value=5000)
+monthly_rate = st.number_input('Monthly Rate', min_value=2000, max_value=30000, value=15000)
+over_time = st.selectbox('Over Time (0=No, 1=Yes)', [0, 1])
+percent_salary_hike = st.number_input('Percent Salary Hike', min_value=0, max_value=100, value=15)
+total_working_years = st.number_input('Total Working Years', min_value=0, max_value=40, value=10)
+years_at_company = st.number_input('Years at Company', min_value=0, max_value=40, value=5)
 
-    submitted = st.form_submit_button("Prediksi")
+# Prediksi
+if st.button('Prediksi'):
+    input_df = pd.DataFrame({
+        'age': [age],
+        'daily_rate': [daily_rate],
+        'distance_from_home': [distance_from_home],
+        'hourly_rate': [hourly_rate],
+        'monthly_income': [monthly_income],
+        'monthly_rate': [monthly_rate],
+        'over_time': [over_time],
+        'percent_salary_hike': [percent_salary_hike],
+        'total_working_years': [total_working_years],
+        'years_at_company': [years_at_company]
+    })
 
-# Proses prediksi saat tombol ditekan
-if submitted:
-    over_time_val = 1 if over_time == "Yes" else 0
+    # Prediksi
+    pred = model.predict(input_df)[0]
+    proba = model.predict_proba(input_df)[0]
 
-    # Urutan fitur sesuai training
-    input_data = np.array([[age, daily_rate, distance_from_home, hourly_rate,
-                            monthly_income, monthly_rate, num_companies_worked,
-                            over_time_val, total_working_years, years_at_company]])
-
-    prediction = model.predict(input_data)[0]
-    probability = model.predict_proba(input_data)[0][1]
-
-    st.markdown("---")
-    if prediction == 1:
-        st.error(f"🚨 Karyawan **berisiko keluar** dari perusahaan.")
-    else:
-        st.success(f"✅ Karyawan **tidak berisiko** keluar.")
-
-    st.markdown(f"**Probabilitas keluar:** `{probability:.2%}`")
+    st.subheader('📈 Hasil Prediksi:')
+    st.write(f"Attrition: **{'Yes' if pred == 1 else 'No'}**")
+    st.write(f"Confidence Score: **{round(max(proba)*100, 2)}%**")
