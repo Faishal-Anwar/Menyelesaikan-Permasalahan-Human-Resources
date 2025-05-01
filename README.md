@@ -122,8 +122,6 @@ Langkah-langkah menggunakan sistem machine learning berbasis XGBoost adalah seba
 3. Hasil prediksi akan tampil di bagian bawah.
 ![image](https://github.com/user-attachments/assets/2eedf8f4-15f9-4ee9-821e-34a56da807b1)
 
----
-
 ## Kesimpulan
 - Grafik "Attrition vs Overtime Status" menunjukkan bahwa karyawan yang bekerja lembur memiliki kemungkinan keluar yang jauh lebih tinggi. Dari 179 karyawan yang lembur, 98 orang mengalami attrition (sekitar 55%), jauh lebih tinggi dibandingkan mereka yang tidak lembur. Ini memperkuat bahwa overtime adalah salah satu faktor paling signifikan dalam keputusan karyawan untuk meninggalkan perusahaan.
 
