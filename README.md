@@ -28,18 +28,18 @@ Dataset diambil dari:
 
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi secara lokal:
 
-### 1. Clone Repository
+#### 1. Clone Repository
 ```bash
 https://github.com/Matahari-Masalalu/Menyelesaikan-Permasalahan-Human-Resources-Data-Scientist-Expert-Dicoding.git
 cd /Menyelesaikan-Permasalahan-Human-Resources-Data-Scientist-Expert-Dicoding
 ```
 
-### 2. Buat Virtual Environment
+#### 2. Buat Virtual Environment
 ```bash
 virtualenv venv
 ```
 
-### 3. Aktifkan Virtual Environment
+#### 3. Aktifkan Virtual Environment
 Windows:
 ```bash
 venv\Scripts\activate
@@ -49,12 +49,12 @@ macOS/Linux:
 source venv/bin/activate
 ```
 
-### 4. Install Dependencies
+#### 4. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Jalankan Aplikasi Streamlit
+#### 5. Jalankan Aplikasi Streamlit
 ```bash
 streamlit run streamlit_app.py
 ```
