@@ -24,7 +24,7 @@
 Dataset diambil dari:  
 [Employee Data - GitHub](https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv)
 
-## Setup Environment (Local Deployment)
+### Setup Environment (Local Deployment)
 
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi secara lokal:
 
