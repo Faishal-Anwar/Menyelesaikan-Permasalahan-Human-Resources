@@ -34,6 +34,28 @@ link dashboard 2 : [link dashboard 2](https://public.tableau.com/views/JayaJayaM
 ![image](https://github.com/user-attachments/assets/24963151-707c-43b6-8540-8d008e210d54)
 ![image](https://github.com/user-attachments/assets/c3c43c23-1ace-4c3f-8efa-d20b75741ade)
 
+## ⚙️ Setup Environment (Local Deployment)
+
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi secara lokal:
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/aNdr3W03/Employee-Attrition-Problem.git
+cd Employee-Attrition-Problem
+
+virtualenv venv
+
+venv\Scripts\activate
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+streamlit run streamlit_app.py
+
+```
+
 
 
 Komponen Dashboard:
