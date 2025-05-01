@@ -29,10 +29,9 @@ Dataset diambil dari:
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi secara lokal:
 
 ### 1. Clone Repository
-
 ```bash
-git clone https://github.com/aNdr3W03/Employee-Attrition-Problem.git
-cd Employee-Attrition-Problem
+https://github.com/Matahari-Masalalu/Menyelesaikan-Permasalahan-Human-Resources-Data-Scientist-Expert-Dicoding.git
+cd /Menyelesaikan-Permasalahan-Human-Resources-Data-Scientist-Expert-Dicoding
 ```
 
 ### 2. Buat Virtual Environment
