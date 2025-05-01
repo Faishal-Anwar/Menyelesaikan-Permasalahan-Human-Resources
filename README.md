@@ -22,7 +22,7 @@
 
 ### Sumber Data
 Dataset diambil dari:  
-🔗 [Employee Data - GitHub](https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv)
+[Employee Data - GitHub](https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv)
 
 ## Setup Environment (Local Deployment)
 
