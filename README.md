@@ -62,12 +62,10 @@ streamlit run streamlit_app.py
 ## Dashboard Analitik - Tableau Public
 untuk link dashboard bisa diakses melalui
 
-link dashboard 1 : [link dashboard 11](https://public.tableau.com/views/JayaJayaMajuDicoding/Dashboard3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+link dashboard : [link dashboard](https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashboard102?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-link dashboard 2 : [link dashboard 2](https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+<img width="1000" height="1221" alt="Employee Attrition Dashboard" src="https://github.com/user-attachments/assets/140595f6-179e-44b4-a9a6-7e81ebc9bf91" />
 
-![image](https://github.com/user-attachments/assets/24963151-707c-43b6-8540-8d008e210d54)
-![image](https://github.com/user-attachments/assets/c3c43c23-1ace-4c3f-8efa-d20b75741ade)
 
 Komponen Dashboard:
 
